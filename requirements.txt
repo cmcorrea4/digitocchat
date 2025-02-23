@@ -1,0 +1,15 @@
+# Requerimientos básicos
+streamlit>=1.28.0
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Componentes adicionales para manejo de datos
+pandas>=2.1.0
+numpy>=1.24.0
+
+# Componentes para manejo de HTML
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Componentes de seguridad
+python-decouple>=3.8
