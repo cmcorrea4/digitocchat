@@ -14,7 +14,7 @@ def main():
 
     # HTML personalizado que incluye el script del chatbot
     chatbot_html = """
-    <div style="height: 600px;">
+    <div style="height: 500px;">
         <script async
             src="https://agent-b19dea4d7a0319e59496-jmnae.ondigitalocean.app/static/chatbot/widget.js"
             data-agent-id="3cb32dc5-f181-11ef-bf8f-4e013e2ddde4"
@@ -37,7 +37,7 @@ def main():
     """)
 
     # Insertar el componente HTML con el chatbot
-    components.html(chatbot_html, height=600)
+    components.html(chatbot_html, height=400)
 
     # Contenido adicional de la aplicación
     st.markdown("""
