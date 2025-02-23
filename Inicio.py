@@ -37,7 +37,7 @@ def main():
     """)
 
     # Insertar el componente HTML con el chatbot
-    components.html(chatbot_html, height=400)
+    components.html(chatbot_html, height=500)
 
     # Contenido adicional de la aplicación
     st.markdown("""
