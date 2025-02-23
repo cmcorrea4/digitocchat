@@ -11,7 +11,29 @@ def main():
 
     # Título de la aplicación
     st.title("Aplicación con Chatbot Integrado")
+    ####
+    st.subheader("💬 Asistente de Voz")
+    chat_html = """
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Chat Widget</title>
+        </head>
+        <body>
+            <div style="width: 50%; height: 50px;">
+                <elevenlabs-convai agent-id="gMh8bGtmxS5OxxPwDuKT"></elevenlabs-convai>
+            </div>
+            <script src="https://elevenlabs.io/convai-widget/index.js" async></script>
+        </body>
+        </html>
+    """
+    st.components.v1.html(chat_html, height=150, scrolling=False)
+    st.markdown("---")
+    ##
 
+    
+    
     # HTML personalizado que incluye el script del chatbot
     chatbot_html = """
     <div style="height: 500px;">
@@ -47,26 +69,6 @@ def main():
     - Respuestas instantáneas
     """)
 
-####
-st.subheader("💬 Asistente de Voz")
-chat_html = """
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Chat Widget</title>
-    </head>
-    <body>
-        <div style="width: 50%; height: 50px;">
-            <elevenlabs-convai agent-id="gMh8bGtmxS5OxxPwDuKT"></elevenlabs-convai>
-        </div>
-        <script src="https://elevenlabs.io/convai-widget/index.js" async></script>
-    </body>
-    </html>
-"""
-st.components.v1.html(chat_html, height=150, scrolling=False)
-st.markdown("---")
-##
 
 if __name__ == "__main__":
     main()
