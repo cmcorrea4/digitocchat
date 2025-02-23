@@ -78,7 +78,7 @@ def main():
             </body>
             </html>
         """
-        st.components.v1.html(chat_html, height=100, scrolling=False)
+        st.components.v1.html(chat_html, height=150, scrolling=False)
     
     with col2:
         st.markdown("""
@@ -93,9 +93,9 @@ def main():
         </div>
         """, unsafe_allow_html=True)
 
-    # Chatbot integrado
+    # Chatbot integrado con altura ajustada
     chatbot_html = """
-    <div style="height: 0;">
+    <div style="height: 500px;">
         <script async
             src="https://agent-b19dea4d7a0319e59496-jmnae.ondigitalocean.app/static/chatbot/widget.js"
             data-agent-id="3cb32dc5-f181-11ef-bf8f-4e013e2ddde4"
@@ -109,7 +109,8 @@ def main():
         </script>
     </div>
     """
-    components.html(chatbot_html, height=0)
+    # Insertar el chatbot con altura adecuada
+    components.html(chatbot_html, height=500)
 
     # Footer simple
     st.markdown("---")
