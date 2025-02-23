@@ -20,9 +20,9 @@ def main():
             data-agent-id="3cb32dc5-f181-11ef-bf8f-4e013e2ddde4"
             data-chatbot-id="02caM1x3qNq8LsB-oOEQbUaPCNOM9mP_"
             data-name="agent-consinm Chatbot"
-            data-primary-color="#031B4E"
-            data-secondary-color="#E5E8ED"
-            data-button-background-color="#0061EB"
+            data-primary-color="#4A90E2"
+            data-secondary-color="#F5F8FA"
+            data-button-background-color="#64B5F6"
             data-starting-message="Hola!  En que puedo ayudarte?"
             data-logo="/static/chatbot/icons/default-agent.svg">
         </script>
