@@ -97,15 +97,15 @@ def main():
     chatbot_html = """
     <div style="height: 500px;">
         <script async
-            src="https://agent-b19dea4d7a0319e59496-jmnae.ondigitalocean.app/static/chatbot/widget.js"
-            data-agent-id="3cb32dc5-f181-11ef-bf8f-4e013e2ddde4"
-            data-chatbot-id="02caM1x3qNq8LsB-oOEQbUaPCNOM9mP_"
-            data-name="CI - Asistente Virtual"
-            data-primary-color="#4A90E2"
-            data-secondary-color="#F5F8FA"
-            data-button-background-color="#64B5F6"
-            data-starting-message="¡Hola! ¿En qué puedo ayudarte con nuestros productos?"
-            data-logo="/static/chatbot/icons/default-agent.svg">
+         src="https://agent-bc5f7ecd070b4c327aa8-h3546.ondigitalocean.app/static/chatbot/widget.js"
+         data-agent-id="39dbb510-f2cd-11ef-bf8f-4e013e2ddde4"
+         data-chatbot-id="lGjzrqKBLeaqTW9gfodSSh6IFkvP3xyu"
+         data-name="Asesor-CI Chatbot"
+         data-primary-color="#031B4E"
+         data-secondary-color="#E5E8ED"
+         data-button-background-color="#0061EB"
+         data-starting-message="Hola!  en que te puedo ayudar?"
+         data-logo="/static/chatbot/icons/default-agent.svg">
         </script>
     </div>
     """
