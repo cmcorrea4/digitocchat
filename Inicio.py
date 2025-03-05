@@ -38,7 +38,7 @@ def main():
     set_page_style()
     
     # Layout principal
-    st.title("CI - Asistente Empresarial")
+    st.title("AI - Asistentes Industriales")
     st.image("logo_sume2.png",width=200)
     # Crear dos columnas para el contenido principal
     col1, col2 = st.columns([3, 2])
@@ -48,8 +48,8 @@ def main():
         <div style='background-color: #f8f9fa; padding: 2rem; border-radius: 10px;'>
             <h2 style='margin-bottom: 1rem;'>Bienvenido a CI</h2>
             <p style='font-size: 1.1rem; color: #333;'>
-                Consulta nuestro catálogo de productos y precios de manera fácil y rápida.
-                Utiliza nuestros asistentes virtuales para obtener ayuda inmediata.
+                Consulta información de manera fácil y rápida.
+                Utiliza nuestros asistentes industriales para obtener ayuda inmediata.
             </p>
         </div>
         """, unsafe_allow_html=True)
@@ -85,8 +85,8 @@ def main():
         <div style='background-color: white; padding: 1.5rem; border-radius: 10px; border: 1px solid #e0e0e0;'>
             <h3 style='margin-bottom: 1rem;'>Servicios Disponibles</h3>
             <ul style='list-style-type: none; padding-left: 0;'>
-                <li style='margin-bottom: 0.5rem;'>✓ Consulta de precios en tiempo real</li>
-                <li style='margin-bottom: 0.5rem;'>✓ Catálogo de productos actualizado</li>
+                <li style='margin-bottom: 0.5rem;'>✓ Consultas tus KPIs  en tiempo real</li>
+                <li style='margin-bottom: 0.5rem;'>✓ Obten la información de variables de proceso al instante</li>
                 <li style='margin-bottom: 0.5rem;'>✓ Asistencia virtual 24/7</li>
                 <li style='margin-bottom: 0.5rem;'>✓ Soporte técnico especializado</li>
             </ul>
