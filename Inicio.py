@@ -29,7 +29,7 @@ def set_page_style():
 def main():
     # Configuración de la página
     st.set_page_config(
-        page_title="CI - Asistente Virtual",
+        page_title="CI - Asistente Empresarial",
         page_icon="💬",
         layout="wide"
     )
@@ -38,8 +38,8 @@ def main():
     set_page_style()
     
     # Layout principal
-    st.title("CI - Asistente Virtual")
-    
+    st.title("CI - Asistente Empresarial")
+    st.image("logo_sume2.png")
     # Crear dos columnas para el contenido principal
     col1, col2 = st.columns([3, 2])
     
