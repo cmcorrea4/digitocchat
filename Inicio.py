@@ -88,10 +88,10 @@ def main():
         <div style='background-color: white; padding: 1.5rem; border-radius: 10px; border: 1px solid #e0e0e0;'>
             <h3 style='margin-bottom: 1rem;'>Servicios Disponibles</h3>
             <ul style='list-style-type: none; padding-left: 0;'>
-                <li style='margin-bottom: 0.5rem;'>✓ Consultas tus KPIs  en tiempo real</li>
-                <li style='margin-bottom: 0.5rem;'>✓ Obten la información de variables de proceso al instante</li>
-                <li style='margin-bottom: 0.5rem;'>✓ Asistencia virtual 24/7</li>
-                <li style='margin-bottom: 0.5rem;'>✓ Soporte técnico especializado</li>
+                <li style='margin-bottom: 0.5rem;'>✓ Consultas tus KPIs  en tiempo real.</li>
+                <li style='margin-bottom: 0.5rem;'>✓ Información de variables de proceso al instante.</li>
+                <li style='margin-bottom: 0.5rem;'>✓ Asistencia virtual 24/7.</li>
+                <li style='margin-bottom: 0.5rem;'>✓ Soporte técnico especializado.</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
