@@ -46,9 +46,9 @@ def main():
     with col1:
         st.markdown("""
         <div style='background-color: #f8f9fa; padding: 2rem; border-radius: 10px;'>
-            <h2 style='margin-bottom: 1rem;'>Bienvenido a CI</h2>
+            <h2 style='margin-bottom: 1rem;'>Bienvenidos a AI</h2>
             <p style='font-size: 1.1rem; color: #333;'>
-                Consulta información de manera fácil y rápida.
+                Consulta y procesa información de tu empresa manera fácil y rápida.
                 Utiliza nuestros asistentes industriales para obtener ayuda inmediata.
             </p>
         </div>
