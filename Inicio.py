@@ -39,7 +39,7 @@ def main():
     
     # Layout principal
     st.title("CI - Asistente Empresarial")
-    st.image("logo_sume2.png")
+    st.image("logo_sume2.png",width=150)
     # Crear dos columnas para el contenido principal
     col1, col2 = st.columns([3, 2])
     
