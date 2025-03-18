@@ -108,7 +108,7 @@ def main():
          data-secondary-color="#E5E8ED"
          data-button-background-color="#0061EB"
          data-starting-message="Hola!  en que te puedo ayudar?"
-         data-logo="https://sume.com.co/wp-content/uploads/2025/02/Copia-de-SUME-ENERGYC-Logo-1-1.png"   
+         data-logo="logo_sume2.png" >   
         </script>
     </div>
     """
