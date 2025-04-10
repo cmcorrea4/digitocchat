@@ -38,15 +38,15 @@ def main():
     chatbot_html = """
     <div style="height: 500px;">
         <script async
-            src="https://agent-b19dea4d7a0319e59496-jmnae.ondigitalocean.app/static/chatbot/widget.js"
-            data-agent-id="3cb32dc5-f181-11ef-bf8f-4e013e2ddde4"
-            data-chatbot-id="02caM1x3qNq8LsB-oOEQbUaPCNOM9mP_"
-            data-name="agent-consinm Chatbot"
-            data-primary-color="#4A90E2"
-            data-secondary-color="#F5F8FA"
-            data-button-background-color="#64B5F6"
-            data-starting-message="Hola!  En que puedo ayudarte?"
-            data-logo="/static/chatbot/icons/default-agent.svg">
+          src="https://agent-3f4373bb9b9e2521b014-cd9qj.ondigitalocean.app/static/chatbot/widget.js"
+          data-agent-id="de703369-fcf2-11ef-bf8f-4e013e2ddde4"
+          data-chatbot-id="M1iBgnKnoSo7U1LS4gvPlJbUb5VWTaWG"
+          data-name="agent-sensores Chatbot"
+          data-primary-color="#031B4E"
+          data-secondary-color="#E5E8ED"
+          data-button-background-color="#0061EB"
+          data-starting-message="Hola soy Electra, la asisten Digital de SUME EnergyC, en que puedo ayudarte?"
+          data-logo="https://sume.com.co/wp-content/uploads/2025/02/Copia-de-SUME-ENERGYC-Logo-1-1.png">
         </script>
     </div>
     """
