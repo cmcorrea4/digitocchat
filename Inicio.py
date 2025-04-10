@@ -36,7 +36,7 @@ def main():
     
     # HTML personalizado que incluye el script del chatbot
     chatbot_html = """
-    <div style="height: 500px;">
+    <div style="height: 300px;">
         <script async
           src="https://agent-3f4373bb9b9e2521b014-cd9qj.ondigitalocean.app/static/chatbot/widget.js"
           data-agent-id="de703369-fcf2-11ef-bf8f-4e013e2ddde4"
