@@ -13,6 +13,10 @@ def main():
     st.title("Asistentes de voz y texto")
     ####
     st.subheader("💬 Asistente de Voz")
+     st.markdown("""
+    ## TEXTO
+    Interactua a través de la voz con el asistente.
+    """)
     chat_html = """
         <!DOCTYPE html>
         <html>
@@ -53,9 +57,8 @@ def main():
 
     # Contenido principal de la aplicación
     st.markdown("""
-    ## Bienvenido a nuestra aplicación
-    Esta es una aplicación de demostración que integra un chatbot interactivo.
-    Puedes usar el botón del chat que aparece en la esquina inferior derecha.
+    ## TEXTO
+    Interactua de forma textual con el asistente.
     """)
 
     # Insertar el componente HTML con el chatbot
