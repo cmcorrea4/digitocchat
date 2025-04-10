@@ -14,7 +14,7 @@ def main():
     ####
     st.subheader("💬 Asistente de Voz")
     st.markdown("""
-    ## TEXTO
+    ## VOZ
     Interactua a través de la voz con el asistente.
     """)
     chat_html = """
