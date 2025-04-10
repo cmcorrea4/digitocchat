@@ -10,7 +10,7 @@ def main():
     )
 
     # Título de la aplicación
-    st.title("Aplicación con Chatbot Integrado")
+    st.title("Asistentes de voz y texto")
     ####
     st.subheader("💬 Asistente de Voz")
     chat_html = """
@@ -32,7 +32,7 @@ def main():
     st.markdown("---")
     ##
 
-    
+    st.subheader("💬 Asistente de texto")
     
     # HTML personalizado que incluye el script del chatbot
     chatbot_html = """
