@@ -46,9 +46,9 @@ def main():
           data-agent-id="de703369-fcf2-11ef-bf8f-4e013e2ddde4"
           data-chatbot-id="M1iBgnKnoSo7U1LS4gvPlJbUb5VWTaWG"
           data-name="agent-sensores Chatbot"
-          data-primary-color="#031B4E"
+          data-primary-color="#EB6600"
           data-secondary-color="#E5E8ED"
-          data-button-background-color="#0061EB"
+          data-button-background-color="#EB6600"
           data-starting-message="Hola soy Electra, la asisten Digital de SUME EnergyC, en que puedo ayudarte?"
           data-logo="/static/chatbot/icons/default-agent.svg">
         </script>
