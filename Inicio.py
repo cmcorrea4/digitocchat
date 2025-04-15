@@ -36,8 +36,7 @@ def main():
     st.markdown("---")
     ##
 
-    st.subheader("		
-📈 Asistente de Energía")
+    st.subheader("📈 Asistente de Energía")
     
     # HTML personalizado que incluye el script del chatbot
     chatbot_html = """
