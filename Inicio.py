@@ -54,7 +54,7 @@ def main():
         </script>
     </div>
     """
-    st.subheader("💬 Asistente Textil")
+   
     chatbot2_html="""
     <div style="height: 100px;">
         <script async
@@ -79,6 +79,7 @@ def main():
 
     # Insertar el componente HTML con el chatbot
     components.html(chatbot_html, height=400)
+     st.subheader("💬 Asistente Textil")
     components.html(chatbot2_html, height=400)
 
     # Contenido adicional de la aplicación
