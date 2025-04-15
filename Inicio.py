@@ -54,7 +54,23 @@ def main():
         </script>
     </div>
     """
-
+    st.subheader("💬 Asistente Textil")
+    chatbot2_html="""
+    <div style="height: 100px;">
+        <script async
+          src="https://uq726hao4xro7jumqyhtswwr.agents.do-ai.run/static/chatbot/widget.js"
+          data-agent-id="7b5424b4-04e6-11f0-bf8f-4e013e2ddde4"
+          data-chatbot-id="w2nmpPtU6h_qGYKXdZ1-hSmvAlRhkzKQ"
+          data-name="agent-coordinador Chatbot"
+          data-primary-color="#031B4E"
+          data-secondary-color="#E5E8ED"
+          data-button-background-color="#0061EB"
+          data-starting-message="Hola! En que puedo asistirte?"
+          data-logo="/static/chatbot/icons/default-agent.svg">
+</script>
+    </div>
+    """
+    
     # Contenido principal de la aplicación
     st.markdown("""
     ## TEXTO
