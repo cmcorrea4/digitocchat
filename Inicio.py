@@ -32,55 +32,57 @@ def main():
     
     /* Eliminar espacios entre elementos */
     .main .block-container {
-        padding-top: 0rem;
-        padding-bottom: 0rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
         max-width: 95%;
     }
     
     .st-emotion-cache-16txtl3 {
-        padding: 1rem 1rem 1rem;
+        padding: 0.5rem 0.5rem 0.5rem;
     }
     
     /* Reducir espacio vertical entre componentes */
     .element-container, [data-testid="stVerticalBlock"] {
         gap: 0px !important;
-        margin-bottom: 10px !important;
+        margin-bottom: 5px !important;
     }
+    
     h1, h2, h3 {
         color: var(--secondary);
         font-family: 'Segoe UI', sans-serif;
+        margin-bottom: 0.5rem;
     }
     
     /* Tarjetas para cada asistente */
     .assistant-card {
         background-color: white;
         border-radius: 10px;
-        padding: 20px;
+        padding: 15px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         border-left: 5px solid var(--primary);
     }
     
     /* Iconos grandes */
     .icon-large {
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: var(--primary);
-        margin-bottom: 10px;
+        margin-right: 10px;
     }
     
     /* Separador con gradiente */
     .gradient-divider {
         height: 3px;
-        background: linear-gradient(90deg, var(--primary), var(--secondary));
-        margin: 20px 0;
+        background: linear-gradient(90deg, #EB6600, #031B4E);
+        margin: 10px 0;
         border-radius: 3px;
     }
     
-    /* Responsive design */
-    @media (max-width: 768px) {
-        .assistant-card {
-            padding: 15px;
-        }
+    /* Ajustar altura del chatbot */
+    .chatbot-container {
+        height: 500px;
+        margin-top: 0;
+        padding: 0;
     }
     
     /* Ocultar el encabezado "streamlit" por defecto */
@@ -88,33 +90,38 @@ def main():
     header {visibility: hidden;}
     footer {visibility: hidden;}
     
-    /* Estilo para el contenedor del chat */
-    .chat-container {
-        border-radius: 10px;
-        background-color: #f8f9fa;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        margin-top: 20px;
-        min-height: 400px;
-    }
-    
     /* Ajuste para el logo y título */
     .header-container {
         display: flex;
         align-items: center;
-        padding: 1rem 0;
-        margin-bottom: 2rem;
+        padding: 0.5rem 0;
+        margin-bottom: 1rem;
     }
     
     .header-title {
         color: #031B4E;
         margin-left: 15px;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     /* Ajustes para el menú */
     .stHorizontalBlock {
         gap: 0 !important;
+    }
+    
+    /* Eliminar margen superior del primer elemento */
+    .main > .block-container > div:first-child {
+        margin-top: 0 !important;
+    }
+    
+    /* Corregir el espacio entre tarjetas y elementos */
+    p {
+        margin-bottom: 0.5rem;
+    }
+    
+    ul {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -122,7 +129,7 @@ def main():
     # Header con logo y título
     col1, col2 = st.columns([1, 5])
     with col1:
-        st.image("logo_sume2.png", width=120)
+        st.image("logo_sume2.png", width=100)
     with col2:
         st.markdown("<h1 class='header-title'>Asistentes Digitales SUME</h1>", unsafe_allow_html=True)
     
@@ -137,7 +144,7 @@ def main():
         styles={
             "container": {"padding": "0!important", "background-color": "#f8f9fa"},
             "icon": {"color": "#EB6600", "font-size": "18px"},
-            "nav-link": {"font-size": "16px", "text-align": "center", "margin": "0px", "--hover-color": "#eee"},
+            "nav-link": {"font-size": "16px", "text-align": "center", "margin": "0px", "--hover-color": "#eee", "padding": "10px"},
             "nav-link-selected": {"background-color": "#EB6600", "color": "white"},
         }
     )
@@ -153,7 +160,7 @@ def main():
                 <p>Nuestros asistentes digitales están diseñados para facilitar su interacción con los servicios de SUME Energy. 
                 Elija el tipo de asistente que necesita utilizando la barra de navegación superior.</p>
                 
-                <div style="height: 3px; background: linear-gradient(90deg, #EB6600, #031B4E); margin: 20px 0; border-radius: 3px;"></div>
+                <div style="height: 3px; background: linear-gradient(90deg, #EB6600, #031B4E); margin: 10px 0; border-radius: 3px;"></div>
                 
                 <h3>Nuestros Asistentes:</h3>
                 <ul>
@@ -169,39 +176,45 @@ def main():
     
     # Asistente de Voz
     elif selected == "Asistente de Voz":
+        # Encabezado del asistente
         st.markdown("""
         <div class="assistant-card">
             <div style="display: flex; align-items: center;">
-                <i class="material-icons" style="font-size: 2rem; color: #EB6600;">mic</i>
-                <h2 style="margin-left: 15px;">Asistente de Voz</h2>
+                <i class="material-icons icon-large">mic</i>
+                <h2 style="margin-left: 10px; margin-bottom: 0;">Asistente de Voz</h2>
             </div>
             <p>Interactúa a través de la voz con nuestro asistente inteligente.</p>
         </div>
         """, unsafe_allow_html=True)
         
-        # Widget de voz con Elevenlabs - reducción de espacio
-        components.html("""
-            <div style="margin-top:-20px; padding:10px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
-                <elevenlabs-convai agent-id="gMh8bGtmxS5OxxPwDuKT"></elevenlabs-convai>
-                <script src="https://elevenlabs.io/convai-widget/index.js" async></script>
-            </div>
-        """, height=400, scrolling=False)
+        # Widget de voz con Elevenlabs
+        html_voice = """
+        <div style="background-color: #f8f8f8; border-radius: 10px; padding: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0;">
+            <elevenlabs-convai agent-id="gMh8bGtmxS5OxxPwDuKT"></elevenlabs-convai>
+            <script src="https://elevenlabs.io/convai-widget/index.js" async></script>
+        </div>
+        """
+        st.markdown('<div style="margin-top: -10px;">', unsafe_allow_html=True)
+        components.html(html_voice, height=450, scrolling=False)
+        st.markdown('</div>', unsafe_allow_html=True)
     
     # Asistente de Energía
     elif selected == "Asistente de Energía":
+        # Encabezado del asistente
         st.markdown("""
         <div class="assistant-card">
             <div style="display: flex; align-items: center;">
-                <i class="material-icons" style="font-size: 2rem; color: #EB6600;">bolt</i>
-                <h2 style="margin-left: 15px;">Asistente de Energía</h2>
+                <i class="material-icons icon-large">bolt</i>
+                <h2 style="margin-left: 10px; margin-bottom: 0;">Asistente de Energía</h2>
             </div>
             <p>Consulta información sobre consumo energético, eficiencia y recomendaciones personalizadas.</p>
         </div>
         """, unsafe_allow_html=True)
         
-        # Insertar el widget de chatbot de energía directamente
-        components.html("""
-            <div style="margin-top:-20px; padding:10px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+        # Widget de chatbot de energía
+        html_energy = """
+        <div style="background-color: #f8f8f8; border-radius: 10px; padding: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0;">
+            <div style="height: 500px;">
                 <script async
                   src="https://agent-3f4373bb9b9e2521b014-cd9qj.ondigitalocean.app/static/chatbot/widget.js"
                   data-agent-id="de703369-fcf2-11ef-bf8f-4e013e2ddde4"
@@ -214,23 +227,29 @@ def main():
                   data-logo="/static/chatbot/icons/default-agent.svg">
                 </script>
             </div>
-        """, height=500)
+        </div>
+        """
+        st.markdown('<div style="margin-top: -10px;">', unsafe_allow_html=True)
+        components.html(html_energy, height=520)
+        st.markdown('</div>', unsafe_allow_html=True)
     
     # Asistente Textil
     elif selected == "Asistente Textil":
+        # Encabezado del asistente
         st.markdown("""
         <div class="assistant-card">
             <div style="display: flex; align-items: center;">
-                <i class="material-icons" style="font-size: 2rem; color: #EB6600;">layers</i>
-                <h2 style="margin-left: 15px;">Asistente Textil</h2>
+                <i class="material-icons icon-large">layers</i>
+                <h2 style="margin-left: 10px; margin-bottom: 0;">Asistente Textil</h2>
             </div>
             <p>Resuelve tus dudas sobre nuestros productos textiles y recomendaciones personalizadas.</p>
         </div>
         """, unsafe_allow_html=True)
         
-        # Insertar el widget de chatbot textil directamente
-        components.html("""
-            <div style="margin-top:-20px; padding:10px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+        # Widget de chatbot textil
+        html_textile = """
+        <div style="background-color: #f8f8f8; border-radius: 10px; padding: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0;">
+            <div style="height: 500px;">
                 <script async
                   src="https://uq726hao4xro7jumqyhtswwr.agents.do-ai.run/static/chatbot/widget.js"
                   data-agent-id="7b5424b4-04e6-11f0-bf8f-4e013e2ddde4"
@@ -243,7 +262,11 @@ def main():
                   data-logo="/static/chatbot/icons/default-agent.svg">
                 </script>
             </div>
-        """, height=500)
+        </div>
+        """
+        st.markdown('<div style="margin-top: -10px;">', unsafe_allow_html=True)
+        components.html(html_textile, height=520)
+        st.markdown('</div>', unsafe_allow_html=True)
     
     # Acerca de
     elif selected == "Acerca de":
@@ -254,7 +277,7 @@ def main():
             Nuestros asistentes digitales están diseñados para facilitar el acceso a nuestros servicios
             y proporcionar una experiencia de usuario excepcional.</p>
             
-            <div style="height: 3px; background: linear-gradient(90deg, #EB6600, #031B4E); margin: 20px 0; border-radius: 3px;"></div>
+            <div style="height: 3px; background: linear-gradient(90deg, #EB6600, #031B4E); margin: 10px 0; border-radius: 3px;"></div>
             
             <h3>Contacto</h3>
             <p>Para más información, contáctenos a través de:</p>
@@ -273,10 +296,10 @@ def main():
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     """, unsafe_allow_html=True)
     
-    # Footer
+    # Footer compacto
     st.markdown("""
-    <div style="background-color: #f8f9fa; padding: 10px; text-align: center; border-top: 1px solid #ddd; margin-top: 30px;">
-        <p style="margin: 0; font-size: 14px;">© 2025 SUME Energy - Todos los derechos reservados</p>
+    <div style="background-color: #f8f9fa; padding: 5px; text-align: center; border-top: 1px solid #ddd; margin-top: 10px;">
+        <p style="margin: 0; font-size: 12px;">© 2025 SUME Energy - Todos los derechos reservados</p>
     </div>
     """, unsafe_allow_html=True)
 
