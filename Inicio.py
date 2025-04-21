@@ -216,7 +216,7 @@ def main():
             
             # Usar componentes nativos de Streamlit para las listas con más espacio
             
-           import streamlit as st
+import streamlit as st
 import streamlit.components.v1 as components
 from streamlit_option_menu import option_menu
 import base64
