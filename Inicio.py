@@ -174,7 +174,7 @@ def main():
             """, unsafe_allow_html=True)
         
         with col2:
-            st.image("logo_sume.png", width=300)
+            st.image("logo_sume2.png", width=300)
     
     # Asistente de Voz
     elif selected == "Asistente de Voz":
