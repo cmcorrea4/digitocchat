@@ -216,6 +216,7 @@ def main():
             
             # Usar componentes nativos de Streamlit para las listas con más espacio
             st.markdown("<div style='margin-bottom: 12px;'>                                </div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>                                </div>", unsafe_allow_html=True)
             st.markdown("<div style='margin-bottom: 12px;'>• Interacción por comandos de voz</div>", unsafe_allow_html=True)
             st.markdown("<div style='margin-bottom: 12px;'>• Reconocimiento de lenguaje natural</div>", unsafe_allow_html=True)
             st.markdown("<div style='margin-bottom: 12px;'>• Respuestas claras y conversacionales</div>", unsafe_allow_html=True)
