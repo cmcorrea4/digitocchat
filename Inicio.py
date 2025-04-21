@@ -283,6 +283,8 @@ def main():
             """, unsafe_allow_html=True)
             
             # Usar componentes nativos de Streamlit para las listas con más espacio
+            st.markdown("<div style='margin-bottom: 12px;'>                                </div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>                                </div>", unsafe_allow_html=True)
             st.markdown("<div style='margin-bottom: 12px;'>• Monitoreo de consumo energético en tiempo real</div>", unsafe_allow_html=True)
             st.markdown("<div style='margin-bottom: 12px;'>• Análisis de patrones de uso de energía</div>", unsafe_allow_html=True)
             st.markdown("<div style='margin-bottom: 12px;'>• Recomendaciones personalizadas para ahorro</div>", unsafe_allow_html=True)
