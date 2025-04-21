@@ -207,27 +207,31 @@ def main():
             st.markdown('</div>', unsafe_allow_html=True)
         
         with col2:
-            # Información descriptiva del asistente de voz
+            # Información descriptiva del asistente de voz - usando método nativo de Streamlit para evitar HTML visible
             st.markdown("""
             <div style="background-color: #f8f8f8; border-radius: 10px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0; border-left: 3px solid #EB6600;">
                 <h4 style="color: #031B4E; margin-top: 0;">Características</h4>
-                <ul style="margin-left: 15px; padding-left: 0;">
-                    <li>Interacción por comandos de voz</li>
-                    <li>Reconocimiento de lenguaje natural</li>
-                    <li>Respuestas claras y conversacionales</li>
-                    <li>Compatible con diferentes acentos</li>
-                    <li>Navegación manos libres por servicios</li>
-                </ul>
-                
-                <h4 style="color: #031B4E; margin-top: 15px;">¿Qué puedes preguntar?</h4>
-                <ul style="margin-left: 15px; padding-left: 0;">
-                    <li>"¿Qué servicios ofrece SUME Energy?"</li>
-                    <li>"Necesito información sobre productos"</li>
-                    <li>"¿Cómo puedo contactar a un asesor?"</li>
-                    <li>"Cuéntame sobre las soluciones energéticas"</li>
-                </ul>
             </div>
             """, unsafe_allow_html=True)
+            
+            # Usar componentes nativos de Streamlit para las listas
+            st.markdown("• Interacción por comandos de voz")
+            st.markdown("• Reconocimiento de lenguaje natural")
+            st.markdown("• Respuestas claras y conversacionales")
+            st.markdown("• Compatible con diferentes acentos")
+            st.markdown("• Navegación manos libres por servicios")
+            
+            st.markdown("""
+            <div style="background-color: #f8f8f8; padding-left: 15px; padding-bottom: 5px;">
+                <h4 style="color: #031B4E; margin-top: 15px;">¿Qué puedes preguntar?</h4>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # Usar componentes nativos de Streamlit para las preguntas
+            st.markdown('• "¿Qué servicios ofrece SUME Energy?"')
+            st.markdown('• "Necesito información sobre productos"')
+            st.markdown('• "¿Cómo puedo contactar a un asesor?"')
+            st.markdown('• "Cuéntame sobre las soluciones energéticas"')
     
     # Asistente de Energía
     elif selected == "Asistente de Energía":
@@ -269,27 +273,31 @@ def main():
             st.markdown('</div>', unsafe_allow_html=True)
         
         with col2:
-            # Información descriptiva del asistente (zona roja)
+            # Información descriptiva del asistente - usando el método nativo de Streamlit para evitar HTML visible
             st.markdown("""
             <div style="background-color: #f8f8f8; border-radius: 10px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0; border-left: 3px solid #EB6600;">
                 <h4 style="color: #031B4E; margin-top: 0;">Características</h4>
-                <ul style="margin-left: 15px; padding-left: 0;">
-                    <li>Monitoreo de consumo energético en tiempo real</li>
-                    <li>Análisis de patrones de uso de energía</li>
-                    <li>Recomendaciones personalizadas para ahorro</li>
-                    <li>Alertas de consumo inusual</li>
-                    <li>Calculadora de eficiencia energética</li>
-                </ul>
-                
-                <h4 style="color: #031B4E; margin-top: 15px;">¿Qué puedes preguntar?</h4>
-                <ul style="margin-left: 15px; padding-left: 0;">
-                    <li>¿Cómo reducir mi factura eléctrica?</li>
-                    <li>¿Cuáles son mis horas de mayor consumo?</li>
-                    <li>Comparación de consumo mensual</li>
-                    <li>Tips para mejorar la eficiencia energética</li>
-                </ul>
             </div>
             """, unsafe_allow_html=True)
+            
+            # Usar componentes nativos de Streamlit para las listas
+            st.markdown("• Monitoreo de consumo energético en tiempo real")
+            st.markdown("• Análisis de patrones de uso de energía")
+            st.markdown("• Recomendaciones personalizadas para ahorro")
+            st.markdown("• Alertas de consumo inusual")
+            st.markdown("• Calculadora de eficiencia energética")
+            
+            st.markdown("""
+            <div style="background-color: #f8f8f8; padding-left: 15px; padding-bottom: 5px;">
+                <h4 style="color: #031B4E; margin-top: 15px;">¿Qué puedes preguntar?</h4>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # Usar componentes nativos de Streamlit para las preguntas
+            st.markdown("• ¿Cómo reducir mi factura eléctrica?")
+            st.markdown("• ¿Cuáles son mis horas de mayor consumo?")
+            st.markdown("• Comparación de consumo mensual")
+            st.markdown("• Tips para mejorar la eficiencia energética")
     
     # Asistente Textil
     elif selected == "Asistente Textil":
@@ -331,27 +339,31 @@ def main():
             st.markdown('</div>', unsafe_allow_html=True)
         
         with col2:
-            # Información descriptiva del asistente textil
+            # Información descriptiva del asistente textil - usando método nativo de Streamlit
             st.markdown("""
             <div style="background-color: #f8f8f8; border-radius: 10px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0; border-left: 3px solid #031B4E;">
                 <h4 style="color: #031B4E; margin-top: 0;">Características</h4>
-                <ul style="margin-left: 15px; padding-left: 0;">
-                    <li>Catálogo completo de productos textiles</li>
-                    <li>Especificaciones técnicas detalladas</li>
-                    <li>Recomendaciones según necesidades</li>
-                    <li>Información sobre disponibilidad</li>
-                    <li>Guía de mantenimiento y cuidados</li>
-                </ul>
-                
-                <h4 style="color: #031B4E; margin-top: 15px;">¿Qué puedes preguntar?</h4>
-                <ul style="margin-left: 15px; padding-left: 0;">
-                    <li>¿Qué materiales usan en sus productos?</li>
-                    <li>¿Tienen opciones sostenibles?</li>
-                    <li>Recomendaciones según mi industria</li>
-                    <li>Información de envíos y disponibilidad</li>
-                </ul>
             </div>
             """, unsafe_allow_html=True)
+            
+            # Usar componentes nativos de Streamlit para las listas
+            st.markdown("• Catálogo completo de productos textiles")
+            st.markdown("• Especificaciones técnicas detalladas")
+            st.markdown("• Recomendaciones según necesidades")
+            st.markdown("• Información sobre disponibilidad")
+            st.markdown("• Guía de mantenimiento y cuidados")
+            
+            st.markdown("""
+            <div style="background-color: #f8f8f8; padding-left: 15px; padding-bottom: 5px;">
+                <h4 style="color: #031B4E; margin-top: 15px;">¿Qué puedes preguntar?</h4>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # Usar componentes nativos de Streamlit para las preguntas
+            st.markdown("• ¿Qué materiales usan en sus productos?")
+            st.markdown("• ¿Tienen opciones sostenibles?")
+            st.markdown("• Recomendaciones según mi industria")
+            st.markdown("• Información de envíos y disponibilidad")
     
     # Acerca de
     elif selected == "Acerca de":
