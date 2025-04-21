@@ -54,7 +54,7 @@ def main():
     '''
     
     # Si tienes el logo como archivo:
-    with open("logo_sume.png", "rb") as img_file:
+    with open("logo_sume2.png", "rb") as img_file:
         img_bytes = base64.b64encode(img_file.read()).decode()
         st.markdown(logo_html.format(img_bytes), unsafe_allow_html=True)
     
