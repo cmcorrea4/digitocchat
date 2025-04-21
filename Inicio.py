@@ -160,16 +160,18 @@ def main():
                 <p>Nuestros asistentes digitales están diseñados para facilitar su interacción con los servicios de SUME Energy. 
                 Elija el tipo de asistente que necesita utilizando la barra de navegación superior.</p>
                 
-                <div style="height: 3px; background: linear-gradient(90deg, #EB6600, #031B4E); margin: 10px 0; border-radius: 3px;"></div>
-                
-                <h3>Nuestros Asistentes:</h3>
-                <ul>
-                    <li><strong>Asistente de Voz</strong> - Interactúe mediante comandos de voz</li>
-                    <li><strong>Asistente de Energía</strong> - Consulte información sobre consumo y eficiencia energética</li>
-                    <li><strong>Asistente Textil</strong> - Obtenga asistencia relacionada con nuestros productos textiles</li>
-                </ul>
             </div>
             """, unsafe_allow_html=True)
+            
+            # Usar componentes nativos de Streamlit para el divisor y la lista
+            st.markdown('<hr style="height: 3px; background: linear-gradient(90deg, #EB6600, #031B4E); margin: 10px 0; border: none;">', unsafe_allow_html=True)
+            
+            st.markdown("<h3>Nuestros Asistentes:</h3>", unsafe_allow_html=True)
+            
+            # Usar listas nativas de Streamlit para evitar problemas de renderizado
+            st.markdown("• **Asistente de Voz** - Interactúe mediante comandos de voz")
+            st.markdown("• **Asistente de Energía** - Consulte información sobre consumo y eficiencia energética")
+            st.markdown("• **Asistente Textil** - Obtenga asistencia relacionada con nuestros productos textiles")
         
         with col2:
             st.image("logo_sume2.png", width=150)
@@ -276,18 +278,19 @@ def main():
             <p>SUME Energy es una empresa comprometida con la innovación y la eficiencia energética.
             Nuestros asistentes digitales están diseñados para facilitar el acceso a nuestros servicios
             y proporcionar una experiencia de usuario excepcional.</p>
-            
-            <div style="height: 3px; background: linear-gradient(90deg, #EB6600, #031B4E); margin: 10px 0; border-radius: 3px;"></div>
-            
-            <h3>Contacto</h3>
-            <p>Para más información, contáctenos a través de:</p>
-            <ul>
-                <li>Email: info@sume-energy.com</li>
-                <li>Teléfono: +123 456 7890</li>
-                <li>Dirección: Calle Principal 123, Ciudad</li>
-            </ul>
         </div>
         """, unsafe_allow_html=True)
+        
+        # Usar componentes nativos de Streamlit para el divisor y la lista
+        st.markdown('<hr style="height: 3px; background: linear-gradient(90deg, #EB6600, #031B4E); margin: 10px 0; border: none;">', unsafe_allow_html=True)
+        
+        st.markdown("<h3>Contacto</h3>", unsafe_allow_html=True)
+        st.markdown("Para más información, contáctenos a través de:")
+        
+        # Usar texto nativo de Streamlit para la lista
+        st.markdown("• Email: info@sume-energy.com")
+        st.markdown("• Teléfono: +123 456 7890")
+        st.markdown("• Dirección: Calle Principal 123, Ciudad")
         
         st.image("logo_sume2.png", width=200)
 
