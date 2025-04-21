@@ -34,7 +34,7 @@ def add_logo():
     """
     Function to add logo in the sidebar
     """
-    st.sidebar.image("logo_sume.png", width=200)
+    st.sidebar.image("logo_sume2.png", width=200)
 
 def main():
     # Configuración de la página
