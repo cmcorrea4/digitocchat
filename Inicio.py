@@ -23,11 +23,29 @@ def main():
         --text: #333333;
     }
     
-    /* Estilos generales */
+    /* Reducción de espacios innecesarios */
     .stApp {
         background-color: var(--background);
+        padding: 0;
+        margin: 0;
     }
     
+    /* Eliminar espacios entre elementos */
+    .main .block-container {
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+        max-width: 95%;
+    }
+    
+    .st-emotion-cache-16txtl3 {
+        padding: 1rem 1rem 1rem;
+    }
+    
+    /* Reducir espacio vertical entre componentes */
+    .element-container, [data-testid="stVerticalBlock"] {
+        gap: 0px !important;
+        margin-bottom: 10px !important;
+    }
     h1, h2, h3 {
         color: var(--secondary);
         font-family: 'Segoe UI', sans-serif;
@@ -161,16 +179,13 @@ def main():
         </div>
         """, unsafe_allow_html=True)
         
-        # Widget de voz con Elevenlabs
-        st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
-        
-        # Insertamos el componente HTML de elevenlabs directamente
+        # Widget de voz con Elevenlabs - reducción de espacio
         components.html("""
-            <elevenlabs-convai agent-id="gMh8bGtmxS5OxxPwDuKT"></elevenlabs-convai>
-            <script src="https://elevenlabs.io/convai-widget/index.js" async></script>
+            <div style="margin-top:-20px; padding:10px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+                <elevenlabs-convai agent-id="gMh8bGtmxS5OxxPwDuKT"></elevenlabs-convai>
+                <script src="https://elevenlabs.io/convai-widget/index.js" async></script>
+            </div>
         """, height=400, scrolling=False)
-        
-        st.markdown("</div>", unsafe_allow_html=True)
     
     # Asistente de Energía
     elif selected == "Asistente de Energía":
@@ -184,24 +199,22 @@ def main():
         </div>
         """, unsafe_allow_html=True)
         
-        st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
-        
-        # Insertar el widget de chatbot de energía como un componente HTML
+        # Insertar el widget de chatbot de energía directamente
         components.html("""
-            <script async
-              src="https://agent-3f4373bb9b9e2521b014-cd9qj.ondigitalocean.app/static/chatbot/widget.js"
-              data-agent-id="de703369-fcf2-11ef-bf8f-4e013e2ddde4"
-              data-chatbot-id="M1iBgnKnoSo7U1LS4gvPlJbUb5VWTaWG"
-              data-name="Electra - Asistente de Energía"
-              data-primary-color="#EB6600"
-              data-secondary-color="#E5E8ED"
-              data-button-background-color="#EB6600"
-              data-starting-message="Hola soy Electra, la asistente Digital de SUME EnergyC, ¿en qué puedo ayudarte?"
-              data-logo="/static/chatbot/icons/default-agent.svg">
-            </script>
+            <div style="margin-top:-20px; padding:10px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+                <script async
+                  src="https://agent-3f4373bb9b9e2521b014-cd9qj.ondigitalocean.app/static/chatbot/widget.js"
+                  data-agent-id="de703369-fcf2-11ef-bf8f-4e013e2ddde4"
+                  data-chatbot-id="M1iBgnKnoSo7U1LS4gvPlJbUb5VWTaWG"
+                  data-name="Electra - Asistente de Energía"
+                  data-primary-color="#EB6600"
+                  data-secondary-color="#E5E8ED"
+                  data-button-background-color="#EB6600"
+                  data-starting-message="Hola soy Electra, la asistente Digital de SUME EnergyC, ¿en qué puedo ayudarte?"
+                  data-logo="/static/chatbot/icons/default-agent.svg">
+                </script>
+            </div>
         """, height=500)
-        
-        st.markdown("</div>", unsafe_allow_html=True)
     
     # Asistente Textil
     elif selected == "Asistente Textil":
@@ -215,24 +228,22 @@ def main():
         </div>
         """, unsafe_allow_html=True)
         
-        st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
-        
-        # Insertar el widget de chatbot textil como un componente HTML
+        # Insertar el widget de chatbot textil directamente
         components.html("""
-            <script async
-              src="https://uq726hao4xro7jumqyhtswwr.agents.do-ai.run/static/chatbot/widget.js"
-              data-agent-id="7b5424b4-04e6-11f0-bf8f-4e013e2ddde4"
-              data-chatbot-id="w2nmpPtU6h_qGYKXdZ1-hSmvAlRhkzKQ"
-              data-name="Asistente Textil SUME"
-              data-primary-color="#031B4E"
-              data-secondary-color="#E5E8ED"
-              data-button-background-color="#0061EB"
-              data-starting-message="¡Hola! ¿En qué puedo asistirte con nuestros productos textiles?"
-              data-logo="/static/chatbot/icons/default-agent.svg">
-            </script>
+            <div style="margin-top:-20px; padding:10px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+                <script async
+                  src="https://uq726hao4xro7jumqyhtswwr.agents.do-ai.run/static/chatbot/widget.js"
+                  data-agent-id="7b5424b4-04e6-11f0-bf8f-4e013e2ddde4"
+                  data-chatbot-id="w2nmpPtU6h_qGYKXdZ1-hSmvAlRhkzKQ"
+                  data-name="Asistente Textil SUME"
+                  data-primary-color="#031B4E"
+                  data-secondary-color="#E5E8ED"
+                  data-button-background-color="#0061EB"
+                  data-starting-message="¡Hola! ¿En qué puedo asistirte con nuestros productos textiles?"
+                  data-logo="/static/chatbot/icons/default-agent.svg">
+                </script>
+            </div>
         """, height=500)
-        
-        st.markdown("</div>", unsafe_allow_html=True)
     
     # Acerca de
     elif selected == "Acerca de":
