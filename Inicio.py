@@ -210,28 +210,28 @@ def main():
             # Información descriptiva del asistente de voz - usando método nativo de Streamlit para evitar HTML visible
             st.markdown("""
             <div style="background-color: #f8f8f8; border-radius: 10px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0; border-left: 3px solid #EB6600;">
-                <h4 style="color: #031B4E; margin-top: 0;">Características</h4>
+                <h4 style="color: #031B4E; margin-top: 0; margin-bottom: 20px; font-size: 18px;">Características</h4>
             </div>
             """, unsafe_allow_html=True)
             
-            # Usar componentes nativos de Streamlit para las listas
-            st.markdown("• Interacción por comandos de voz")
-            st.markdown("• Reconocimiento de lenguaje natural")
-            st.markdown("• Respuestas claras y conversacionales")
-            st.markdown("• Compatible con diferentes acentos")
-            st.markdown("• Navegación manos libres por servicios")
+            # Usar componentes nativos de Streamlit para las listas con más espacio
+            st.markdown("<div style='margin-bottom: 12px;'>• Interacción por comandos de voz</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• Reconocimiento de lenguaje natural</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• Respuestas claras y conversacionales</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• Compatible con diferentes acentos</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• Navegación manos libres por servicios</div>", unsafe_allow_html=True)
             
             st.markdown("""
-            <div style="background-color: #f8f8f8; padding-left: 15px; padding-bottom: 5px;">
-                <h4 style="color: #031B4E; margin-top: 15px;">¿Qué puedes preguntar?</h4>
+            <div style="background-color: #f8f8f8; padding-left: 15px; padding-bottom: 5px; margin-top: 25px;">
+                <h4 style="color: #031B4E; margin-top: 15px; margin-bottom: 20px; font-size: 18px;">¿Qué puedes preguntar?</h4>
             </div>
             """, unsafe_allow_html=True)
             
-            # Usar componentes nativos de Streamlit para las preguntas
-            st.markdown('• "¿Qué servicios ofrece SUME Energy?"')
-            st.markdown('• "Necesito información sobre productos"')
-            st.markdown('• "¿Cómo puedo contactar a un asesor?"')
-            st.markdown('• "Cuéntame sobre las soluciones energéticas"')
+            # Usar componentes nativos de Streamlit para las preguntas con más espacio
+            st.markdown("<div style='margin-bottom: 12px;'>• \"¿Qué servicios ofrece SUME Energy?\"</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• \"Necesito información sobre productos\"</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• \"¿Cómo puedo contactar a un asesor?\"</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• \"Cuéntame sobre las soluciones energéticas\"</div>", unsafe_allow_html=True)
     
     # Asistente de Energía
     elif selected == "Asistente de Energía":
@@ -276,28 +276,28 @@ def main():
             # Información descriptiva del asistente - usando el método nativo de Streamlit para evitar HTML visible
             st.markdown("""
             <div style="background-color: #f8f8f8; border-radius: 10px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0; border-left: 3px solid #EB6600;">
-                <h4 style="color: #031B4E; margin-top: 0;">Características</h4>
+                <h4 style="color: #031B4E; margin-top: 0; margin-bottom: 20px; font-size: 18px;">Características</h4>
             </div>
             """, unsafe_allow_html=True)
             
-            # Usar componentes nativos de Streamlit para las listas
-            st.markdown("• Monitoreo de consumo energético en tiempo real")
-            st.markdown("• Análisis de patrones de uso de energía")
-            st.markdown("• Recomendaciones personalizadas para ahorro")
-            st.markdown("• Alertas de consumo inusual")
-            st.markdown("• Calculadora de eficiencia energética")
+            # Usar componentes nativos de Streamlit para las listas con más espacio
+            st.markdown("<div style='margin-bottom: 12px;'>• Monitoreo de consumo energético en tiempo real</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• Análisis de patrones de uso de energía</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• Recomendaciones personalizadas para ahorro</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• Alertas de consumo inusual</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• Calculadora de eficiencia energética</div>", unsafe_allow_html=True)
             
             st.markdown("""
-            <div style="background-color: #f8f8f8; padding-left: 15px; padding-bottom: 5px;">
-                <h4 style="color: #031B4E; margin-top: 15px;">¿Qué puedes preguntar?</h4>
+            <div style="background-color: #f8f8f8; padding-left: 15px; padding-bottom: 5px; margin-top: 25px;">
+                <h4 style="color: #031B4E; margin-top: 15px; margin-bottom: 20px; font-size: 18px;">¿Qué puedes preguntar?</h4>
             </div>
             """, unsafe_allow_html=True)
             
-            # Usar componentes nativos de Streamlit para las preguntas
-            st.markdown("• ¿Cómo reducir mi factura eléctrica?")
-            st.markdown("• ¿Cuáles son mis horas de mayor consumo?")
-            st.markdown("• Comparación de consumo mensual")
-            st.markdown("• Tips para mejorar la eficiencia energética")
+            # Usar componentes nativos de Streamlit para las preguntas con más espacio
+            st.markdown("<div style='margin-bottom: 12px;'>• ¿Cómo reducir mi factura eléctrica?</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• ¿Cuáles son mis horas de mayor consumo?</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• Comparación de consumo mensual</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• Tips para mejorar la eficiencia energética</div>", unsafe_allow_html=True)
     
     # Asistente Textil
     elif selected == "Asistente Textil":
@@ -342,28 +342,28 @@ def main():
             # Información descriptiva del asistente textil - usando método nativo de Streamlit
             st.markdown("""
             <div style="background-color: #f8f8f8; border-radius: 10px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0; border-left: 3px solid #031B4E;">
-                <h4 style="color: #031B4E; margin-top: 0;">Características</h4>
+                <h4 style="color: #031B4E; margin-top: 0; margin-bottom: 20px; font-size: 18px;">Características</h4>
             </div>
             """, unsafe_allow_html=True)
             
-            # Usar componentes nativos de Streamlit para las listas
-            st.markdown("• Catálogo completo de productos textiles")
-            st.markdown("• Especificaciones técnicas detalladas")
-            st.markdown("• Recomendaciones según necesidades")
-            st.markdown("• Información sobre disponibilidad")
-            st.markdown("• Guía de mantenimiento y cuidados")
+            # Usar componentes nativos de Streamlit para las listas con más espacio
+            st.markdown("<div style='margin-bottom: 12px;'>• Catálogo completo de productos textiles</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• Especificaciones técnicas detalladas</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• Recomendaciones según necesidades</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• Información sobre disponibilidad</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• Guía de mantenimiento y cuidados</div>", unsafe_allow_html=True)
             
             st.markdown("""
-            <div style="background-color: #f8f8f8; padding-left: 15px; padding-bottom: 5px;">
-                <h4 style="color: #031B4E; margin-top: 15px;">¿Qué puedes preguntar?</h4>
+            <div style="background-color: #f8f8f8; padding-left: 15px; padding-bottom: 5px; margin-top: 25px;">
+                <h4 style="color: #031B4E; margin-top: 15px; margin-bottom: 20px; font-size: 18px;">¿Qué puedes preguntar?</h4>
             </div>
             """, unsafe_allow_html=True)
             
-            # Usar componentes nativos de Streamlit para las preguntas
-            st.markdown("• ¿Qué materiales usan en sus productos?")
-            st.markdown("• ¿Tienen opciones sostenibles?")
-            st.markdown("• Recomendaciones según mi industria")
-            st.markdown("• Información de envíos y disponibilidad")
+            # Usar componentes nativos de Streamlit para las preguntas con más espacio
+            st.markdown("<div style='margin-bottom: 12px;'>• ¿Qué materiales usan en sus productos?</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• ¿Tienen opciones sostenibles?</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• Recomendaciones según mi industria</div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-bottom: 12px;'>• Información de envíos y disponibilidad</div>", unsafe_allow_html=True)
     
     # Acerca de
     elif selected == "Acerca de":
