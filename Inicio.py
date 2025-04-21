@@ -189,16 +189,45 @@ def main():
         </div>
         """, unsafe_allow_html=True)
         
-        # Widget de voz con Elevenlabs
-        html_voice = """
-        <div style="background-color: #f8f8f8; border-radius: 10px; padding: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0;">
-            <elevenlabs-convai agent-id="gMh8bGtmxS5OxxPwDuKT"></elevenlabs-convai>
-            <script src="https://elevenlabs.io/convai-widget/index.js" async></script>
-        </div>
-        """
-        st.markdown('<div style="margin-top: -10px;">', unsafe_allow_html=True)
-        components.html(html_voice, height=450, scrolling=False)
-        st.markdown('</div>', unsafe_allow_html=True)
+        # Añadir columnas para estructurar mejor el contenido
+        col1, col2 = st.columns([2, 1])
+        
+        with col1:
+            # Widget de voz con Elevenlabs (altura reducida)
+            html_voice = """
+            <div style="background-color: #f8f8f8; border-radius: 10px; padding: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0;">
+                <div style="height: 450px;">
+                    <elevenlabs-convai agent-id="gMh8bGtmxS5OxxPwDuKT"></elevenlabs-convai>
+                    <script src="https://elevenlabs.io/convai-widget/index.js" async></script>
+                </div>
+            </div>
+            """
+            st.markdown('<div style="margin-top: -10px;">', unsafe_allow_html=True)
+            components.html(html_voice, height=450, scrolling=False)
+            st.markdown('</div>', unsafe_allow_html=True)
+        
+        with col2:
+            # Información descriptiva del asistente de voz
+            st.markdown("""
+            <div style="background-color: #f8f8f8; border-radius: 10px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0; border-left: 3px solid #EB6600;">
+                <h4 style="color: #031B4E; margin-top: 0;">Características</h4>
+                <ul style="margin-left: 15px; padding-left: 0;">
+                    <li>Interacción por comandos de voz</li>
+                    <li>Reconocimiento de lenguaje natural</li>
+                    <li>Respuestas claras y conversacionales</li>
+                    <li>Compatible con diferentes acentos</li>
+                    <li>Navegación manos libres por servicios</li>
+                </ul>
+                
+                <h4 style="color: #031B4E; margin-top: 15px;">¿Qué puedes preguntar?</h4>
+                <ul style="margin-left: 15px; padding-left: 0;">
+                    <li>"¿Qué servicios ofrece SUME Energy?"</li>
+                    <li>"Necesito información sobre productos"</li>
+                    <li>"¿Cómo puedo contactar a un asesor?"</li>
+                    <li>"Cuéntame sobre las soluciones energéticas"</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
     
     # Asistente de Energía
     elif selected == "Asistente de Energía":
@@ -213,27 +242,54 @@ def main():
         </div>
         """, unsafe_allow_html=True)
         
-        # Widget de chatbot de energía
-        html_energy = """
-        <div style="background-color: #f8f8f8; border-radius: 10px; padding: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0;">
-            <div style="height: 500px;">
-                <script async
-                  src="https://agent-3f4373bb9b9e2521b014-cd9qj.ondigitalocean.app/static/chatbot/widget.js"
-                  data-agent-id="de703369-fcf2-11ef-bf8f-4e013e2ddde4"
-                  data-chatbot-id="M1iBgnKnoSo7U1LS4gvPlJbUb5VWTaWG"
-                  data-name="Electra - Asistente de Energía"
-                  data-primary-color="#EB6600"
-                  data-secondary-color="#E5E8ED"
-                  data-button-background-color="#EB6600"
-                  data-starting-message="Hola soy Electra, la asistente Digital de SUME EnergyC, ¿en qué puedo ayudarte?"
-                  data-logo="/static/chatbot/icons/default-agent.svg">
-                </script>
+        # Añadir columnas para estructurar mejor el contenido
+        col1, col2 = st.columns([2, 1])
+        
+        with col1:
+            # Widget de chatbot de energía (altura reducida)
+            html_energy = """
+            <div style="background-color: #f8f8f8; border-radius: 10px; padding: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0;">
+                <div style="height: 450px;">
+                    <script async
+                      src="https://agent-3f4373bb9b9e2521b014-cd9qj.ondigitalocean.app/static/chatbot/widget.js"
+                      data-agent-id="de703369-fcf2-11ef-bf8f-4e013e2ddde4"
+                      data-chatbot-id="M1iBgnKnoSo7U1LS4gvPlJbUb5VWTaWG"
+                      data-name="Electra - Asistente de Energía"
+                      data-primary-color="#EB6600"
+                      data-secondary-color="#E5E8ED"
+                      data-button-background-color="#EB6600"
+                      data-starting-message="Hola soy Electra, la asistente Digital de SUME EnergyC, ¿en qué puedo ayudarte?"
+                      data-logo="/static/chatbot/icons/default-agent.svg">
+                    </script>
+                </div>
             </div>
-        </div>
-        """
-        st.markdown('<div style="margin-top: -10px;">', unsafe_allow_html=True)
-        components.html(html_energy, height=520)
-        st.markdown('</div>', unsafe_allow_html=True)
+            """
+            st.markdown('<div style="margin-top: -10px;">', unsafe_allow_html=True)
+            components.html(html_energy, height=470)
+            st.markdown('</div>', unsafe_allow_html=True)
+        
+        with col2:
+            # Información descriptiva del asistente (zona roja)
+            st.markdown("""
+            <div style="background-color: #f8f8f8; border-radius: 10px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0; border-left: 3px solid #EB6600;">
+                <h4 style="color: #031B4E; margin-top: 0;">Características</h4>
+                <ul style="margin-left: 15px; padding-left: 0;">
+                    <li>Monitoreo de consumo energético en tiempo real</li>
+                    <li>Análisis de patrones de uso de energía</li>
+                    <li>Recomendaciones personalizadas para ahorro</li>
+                    <li>Alertas de consumo inusual</li>
+                    <li>Calculadora de eficiencia energética</li>
+                </ul>
+                
+                <h4 style="color: #031B4E; margin-top: 15px;">¿Qué puedes preguntar?</h4>
+                <ul style="margin-left: 15px; padding-left: 0;">
+                    <li>¿Cómo reducir mi factura eléctrica?</li>
+                    <li>¿Cuáles son mis horas de mayor consumo?</li>
+                    <li>Comparación de consumo mensual</li>
+                    <li>Tips para mejorar la eficiencia energética</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
     
     # Asistente Textil
     elif selected == "Asistente Textil":
@@ -248,27 +304,54 @@ def main():
         </div>
         """, unsafe_allow_html=True)
         
-        # Widget de chatbot textil
-        html_textile = """
-        <div style="background-color: #f8f8f8; border-radius: 10px; padding: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0;">
-            <div style="height: 500px;">
-                <script async
-                  src="https://uq726hao4xro7jumqyhtswwr.agents.do-ai.run/static/chatbot/widget.js"
-                  data-agent-id="7b5424b4-04e6-11f0-bf8f-4e013e2ddde4"
-                  data-chatbot-id="w2nmpPtU6h_qGYKXdZ1-hSmvAlRhkzKQ"
-                  data-name="Asistente Textil SUME"
-                  data-primary-color="#031B4E"
-                  data-secondary-color="#E5E8ED"
-                  data-button-background-color="#0061EB"
-                  data-starting-message="¡Hola! ¿En qué puedo asistirte con nuestros productos textiles?"
-                  data-logo="/static/chatbot/icons/default-agent.svg">
-                </script>
+        # Añadir columnas para estructurar mejor el contenido
+        col1, col2 = st.columns([2, 1])
+        
+        with col1:
+            # Widget de chatbot textil (altura reducida)
+            html_textile = """
+            <div style="background-color: #f8f8f8; border-radius: 10px; padding: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0;">
+                <div style="height: 450px;">
+                    <script async
+                      src="https://uq726hao4xro7jumqyhtswwr.agents.do-ai.run/static/chatbot/widget.js"
+                      data-agent-id="7b5424b4-04e6-11f0-bf8f-4e013e2ddde4"
+                      data-chatbot-id="w2nmpPtU6h_qGYKXdZ1-hSmvAlRhkzKQ"
+                      data-name="Asistente Textil SUME"
+                      data-primary-color="#031B4E"
+                      data-secondary-color="#E5E8ED"
+                      data-button-background-color="#0061EB"
+                      data-starting-message="¡Hola! ¿En qué puedo asistirte con nuestros productos textiles?"
+                      data-logo="/static/chatbot/icons/default-agent.svg">
+                    </script>
+                </div>
             </div>
-        </div>
-        """
-        st.markdown('<div style="margin-top: -10px;">', unsafe_allow_html=True)
-        components.html(html_textile, height=520)
-        st.markdown('</div>', unsafe_allow_html=True)
+            """
+            st.markdown('<div style="margin-top: -10px;">', unsafe_allow_html=True)
+            components.html(html_textile, height=470)
+            st.markdown('</div>', unsafe_allow_html=True)
+        
+        with col2:
+            # Información descriptiva del asistente textil
+            st.markdown("""
+            <div style="background-color: #f8f8f8; border-radius: 10px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 0; border-left: 3px solid #031B4E;">
+                <h4 style="color: #031B4E; margin-top: 0;">Características</h4>
+                <ul style="margin-left: 15px; padding-left: 0;">
+                    <li>Catálogo completo de productos textiles</li>
+                    <li>Especificaciones técnicas detalladas</li>
+                    <li>Recomendaciones según necesidades</li>
+                    <li>Información sobre disponibilidad</li>
+                    <li>Guía de mantenimiento y cuidados</li>
+                </ul>
+                
+                <h4 style="color: #031B4E; margin-top: 15px;">¿Qué puedes preguntar?</h4>
+                <ul style="margin-left: 15px; padding-left: 0;">
+                    <li>¿Qué materiales usan en sus productos?</li>
+                    <li>¿Tienen opciones sostenibles?</li>
+                    <li>Recomendaciones según mi industria</li>
+                    <li>Información de envíos y disponibilidad</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
     
     # Acerca de
     elif selected == "Acerca de":
